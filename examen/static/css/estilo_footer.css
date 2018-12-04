@@ -1,0 +1,35 @@
+footer {
+	font-size: .9em;
+	padding-bottom: 5px;
+	border-top: 3px solid #31813a;
+	background-color: #1e357b;
+	background:linear-gradient(#f2f2f2, #e6e6e6);
+	color: #333;
+	padding: 15px;
+    line-height: .3;
+  }
+  footer a {
+      color: #333;
+  }
+  footer a:hover {
+      color: #48a948;
+      text-decoration: none;
+  }  
+  #googleMap {
+      width: 100%;
+      height: 90px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+}
+      
+ #hoverFB {
+   background-image: url('https://libapps.s3.amazonaws.com/accounts/108452/images/FB-FindUsonFacebook-online-144bw.png');
+   width: 114px;
+   height: 21px;
+}
+
+#hoverFB:hover {
+    background-image: url('https://libapps.s3.amazonaws.com/accounts/108452/images/FB-FindUsonFacebook-online-144grn.png');
+   width: 114px;
+   height: 21px;
+}
