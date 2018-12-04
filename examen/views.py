@@ -8,7 +8,6 @@ from .models import Producto, Persona
 def index(request):
     return render(request,'index.html',{})
 
-<<<<<<< HEAD
 # Registro producto
 def registroProducto(request):
     return render(request,'index.html',{'producto': Producto.objects.all()})
@@ -18,9 +17,9 @@ def agregarProducto(request):
     presupuesto = request.POST.get('presupuesto','')
     costoReal = request.FILES.get('costo','')
     tienda = request.POST.get('tienda','')
-    notaAdicional = request.POST.get('nota','')
+    notaAdicional = request.POST.get('nota','') 
 
-    producto = Producto(nombreProducto = nombre, presupuesto = presupuesto, costoReal = costo, tienda = tienda, notaAdicional = nota )
+    producto = Producto(nombreProducto = nombreProducto, presupuesto = presupuesto, costoReal = costoReal, tienda = tienda, notaAdicional = notaAdicional)
     producto.save()
     
     return redirect('index')
@@ -47,10 +46,8 @@ def crearPersona(request):
     user.save()
     
     return redirect('index')
-=======
 def login(request):
     return render(request,'login.html',{})
 
 def registrar(request):
     return render(request,'registrar.html',{})
->>>>>>> master
