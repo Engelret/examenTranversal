@@ -9,8 +9,11 @@ def index(request):
     return render(request,'index.html',{})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 # Registro producto
 def registroProducto(request):
@@ -21,9 +24,9 @@ def agregarProducto(request):
     presupuesto = request.POST.get('presupuesto','')
     costoReal = request.FILES.get('costo','')
     tienda = request.POST.get('tienda','')
-    notaAdicional = request.POST.get('nota','')
+    notaAdicional = request.POST.get('nota','') 
 
-    producto = Producto(nombreProducto = nombre, presupuesto = presupuesto, costoReal = costo, tienda = tienda, notaAdicional = nota )
+    producto = Producto(nombreProducto = nombreProducto, presupuesto = presupuesto, costoReal = costoReal, tienda = tienda, notaAdicional = notaAdicional)
     producto.save()
     
     return redirect('index')
@@ -51,7 +54,10 @@ def crearPersona(request):
     
     return redirect('index')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 def login(request):
@@ -60,6 +66,9 @@ def login(request):
 def registrar(request):
     return render(request,'registrar.html',{})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+>>>>>>> master
+=======
 >>>>>>> master
