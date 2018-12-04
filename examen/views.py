@@ -46,3 +46,8 @@ def crearPersona(request):
     user.save()
     
     return redirect('index')
+def login(request):
+    return render(request,'login.html',{})
+
+def registrar(request):
+    return render(request,'registrar.html',{})

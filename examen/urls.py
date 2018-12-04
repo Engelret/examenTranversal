@@ -13,3 +13,6 @@ urlpatterns = [
     path('registroPersona/',views.registroPersona, name="registroPersona"),
     path('registroPersona/crearPersona/',views.crearPersona, name="crearPersona"),
 ]
+    path('login/', views.login, name="login"),
+    path('login/registrar/', views.registrar, name="registrar"),
+] 
