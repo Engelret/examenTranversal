@@ -8,6 +8,10 @@ from .models import Producto, Persona
 def index(request):
     return render(request,'index.html',{})
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 # Registro producto
 def registroProducto(request):
     return render(request,'index.html',{'producto': Producto.objects.all()})
@@ -46,8 +50,16 @@ def crearPersona(request):
     user.save()
     
     return redirect('index')
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> master
 def login(request):
     return render(request,'login.html',{})
 
 def registrar(request):
     return render(request,'registrar.html',{})
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> master

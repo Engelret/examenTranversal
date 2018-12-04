@@ -26,7 +26,7 @@
   <!-- header -->
   <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"> <img src="{% static 'img/logo/logo_compras.png' %}" style="width: 90px;" alt="LOGO">      NOMBRE
-      </a>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,26 +35,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/">
             <i class="fa fa-home"></i>
-            Home
+            Inicio
             <span class="sr-only">(current)</span>
           </a>
         </li>
+
+        <!-- mostrar solo con sesion iniciada-->
+        {% if user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link" href="#">
-            <i class="fa fa-envelope-o">
-              <span class="badge badge-danger">11</span>
-            </i>
-            Messages
+            <i class="fa fa-cart-plus"> </i>
+            Mis listas
           </a>
         </li>
+        {% endif %}
+        <!-- mostrar solo con sesion iniciada-->
+
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">
-            <i class="fa fa-envelope-o">
-              <span class="badge badge-danger">11</span>
+          <a class="nav-link" href="#saber-mas">
+            <i class="fa fa-info-circle">
+              <!--<span class="badge badge-danger">11</span> -->
             </i>
-            Disabled
+            Saber más
           </a>
         </li>
       </ul>
@@ -68,6 +72,31 @@
     ...
     <br> contenido de la pagina
     <hr>
+
+    <section id="saber-mas">
+      <div class="container-fluid separador">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Saber más</h3>
+            <p>Alumnos de emprendimiento de duoc uc......... y la wea...!</p>
+            <p>Alumnos de emprendimiento de duoc uc......... y la wea...!</p>
+            <p>Alumnos de emprendimiento de duoc uc......... y la wea...!</p>
+            <p>Alumnos de emprendimiento de duoc uc......... y la wea...!</p>
+
+          </div>
+
+          <div class="col-md-6">
+            <img class="img-fluid" src="{% static 'img/logo/logo_duocUc.png' %}" style="width: 300px; padding-top: 20px" alt="LOGO">
+            <img class="img-fluid" src="{% static 'img/logo/logo_compras.png' %}" style="width: 100px; padding-top: 20px" alt="LOGO">
+            
+  
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
     <br> Sección 1.10.32 de "de Finibus Bonorum et Malorum", escrito por Cicero en el 45 antes de Cristo "Sed ut perspiciatis
     unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
     inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
@@ -100,16 +129,16 @@
       <div class="row">
         <div class="col-sm-6">
           <p>
-            <b><a href="#">Inicio</a></b>
+            <b><a href="#"> <i class="fa fa-home"></i> Inicio</a></b>
           </p>
           <p>
             <b><a href="#">Research</a></b>
           </p>
           <p>
-            <b><a href="#">Ayuda</a></b>
+            <b><a href="#"> <i class="fa fa-info-circle"> </i> Saber más</a></b>
           </p>
           <p>
-            <b><a href="#">Library Information</a></b>
+            <b><a href="#"> <i class="fa fa-phone"> </i> ...... </a></b>
           </p>
           <p>
             <div id="hoverFB">
@@ -122,13 +151,10 @@
               Contacto
             </p></b>
           <p>
-            630-844-5437 (phone)
+            <i class="fa fa-phone"> 630-844-5437</i>
           </p>
           <p>
-            630-844-3848 (fax)
-          </p>
-          <p>
-            630-796-7615 (text)
+            <i class="fa fa-phone"> 732-839-2981</i>
           </p>
         </div>
       </div>
